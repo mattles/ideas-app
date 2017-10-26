@@ -53,6 +53,11 @@ resources :ideas do
 end
 ```
 
+and remove 
+```ruby 
+  resources :comments
+```
+
 Replace all of `app/controllers/comments_controller.rb`
 
 with
@@ -110,3 +115,7 @@ add the following
   </p>
 <% end %>
 ```
+
+
+Does it work? 
+Can you deploy this?
