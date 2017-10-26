@@ -1,25 +1,27 @@
 # Generate the Comments
-bundle exec rails g scaffold comments description:text idea:references
+> bundle exec rails g scaffold comments description:text idea:references
 
 # Migrate the database.
-bundle exec rake db:migrate
+
+> bundle exec rake db:migrate
 
 
 ### Make Sure the server is running
 ```sh
 bundle exec rails server
 ```
+
 Then visit the comments page at
 > http://localhost:3000/comments
 
-###  Add the this to the in the Comment class app/models/comment.rb
+###  Add the this to the in the Comment class `app/models/comment.rb`
 ```ruby
 has_many :comments
 ```
 
 ### Now lets show the comments for the ideas
 
-in app/view/ideas/show.html.erb
+in `app/view/ideas/show.html.erb`
 
 add
 ```html
@@ -36,7 +38,7 @@ add
 ## Now lets make it easier to add comments to an idea.
 
 
-### Update the routes
+### Update the routes in `config/routes.rb`
 
 replace
 
@@ -51,7 +53,8 @@ resources :ideas do
 end
 ```
 
-Replace all of app/controllers/comments_controller.rb
+Replace all of `app/controllers/comments_controller.rb`
+
 with
 
 ```ruby
@@ -92,7 +95,7 @@ end
 
 ### Now lets create some new comments.
 
-Back in app/view/ideas/show.html.erb
+Back in `app/view/ideas/show.html.erb`
 
 add the following
 ```html
