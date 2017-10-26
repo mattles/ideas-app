@@ -1,9 +1,14 @@
 # Generate the Comments
-> bundle exec rails g scaffold comments description:text idea:references
+```sh
+bundle exec rails g scaffold comments description:text idea:references
+```
+
 
 # Migrate the database.
 
-> bundle exec rake db:migrate
+```sh
+bundle exec rake db:migrate
+```
 
 
 ### Make Sure the server is running
@@ -117,5 +122,7 @@ add the following
 ```
 
 
+## Done 
 Does it work? 
+
 Can you deploy this?
