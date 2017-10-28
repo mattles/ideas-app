@@ -19,7 +19,7 @@ bundle exec rails server
 Then visit the comments page at
 > http://localhost:3000/comments
 
-###  Add the this to the in the Comment class `app/models/comment.rb`
+###  Add the this to the in the Ideas class `app/models/idea.rb`
 ```ruby
 has_many :comments
 ```
